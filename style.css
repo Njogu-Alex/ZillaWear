@@ -1,0 +1,76 @@
+
+navbar {
+font-family: 'Inter', sans-serif; /* Using Inter font as per instructions */
+margin: 0;
+padding: 0;
+background-color: #f0f2f5; /* Light grey background */
+/* display: flex;  */
+justify-content: center;
+align-items: flex-start; /* Align to top */
+min-height: 5vh; /* Full viewport height */
+padding-top: 50px; /* Add some padding from the top */
+}
+
+.navigation {
+background-color: rgb(243, 73, 73); /* Dark background for the navbar */
+padding: 1rem 2rem;
+border-radius: 0.75rem; /* Rounded corners */
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+display: flex; /* Use flexbox for horizontal items */
+justify-content: center; /* Center items horizontally */
+width: 100%; /* Full width */
+max-width: auto; /* Max width for better aesthetics on larger screens */
+}
+
+.navigation ul {
+list-style: none; /* Remove bullet points */
+margin: 0;
+padding: 0;
+display: flex; /* Flexbox for list items */
+gap: 2.5rem; /* Space between items */
+flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+justify-content: center; /* Center items if they wrap */
+}
+
+.navigation li  {
+color: #fff; /* White text color */
+text-decoration: none; /* Remove underline */
+font-size: 1.10rem; /* Slightly larger font size */
+font-weight: 500; /* Medium font weight */
+padding: 0.5rem 0.75rem; /* Padding inside links */
+transition: color 0.3s ease, background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+border-radius: 0.5rem; /* Rounded corners for links */
+}
+
+.navigation li :hover,
+.navigation li .active {
+color: #e0e0e0; /* Slightly lighter on hover */
+background-color: #555; /* Darker background on hover */
+transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+.navigation li .active {
+font-weight: 700; /* Bold for active item */
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+.navigation {
+    padding: 1rem;
+    border-radius: 0; /* No rounded corners on very small screens for full width look */
+}
+.navigation ul {
+    gap: 1.5rem; /* Less space on small screens */
+}
+.navigation li  {
+    font-size: 1rem; /* Smaller font on small screens */
+    padding: 0.4rem 0.6rem;
+}
+}
+.picture{
+    width :50%; 
+    
+}
+.landingpage{
+    display: flex;
+} 
