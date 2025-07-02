@@ -5,31 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="/icons/favicon.ico.png">
-    <link rel="stylesheet" href="https://fonts.google.com/icons">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=home_app_logo" />
-    <title>ZillaWear</title>
+    <title>MoreZilla Wear</title>
 </head>
 <body>
-    <navbar class="navigation">
-        <ul id="navs">
-            <li class="home">HOME</li>
-            <span class="material-symbols-outlined">
-                home_app_logo
-            </span>
-            <li class="wearables">WEARABLES</li>
-            <span class="material-symbols-outlined">
-                laundry
-            </span>
-            <li class="shoes">SHOES</li>
-            <li>CART</li>
-            <li>CHECK OUT</li>
-        </ul>
-    </navbar>
-    <section class="landingpage">
-        <h1 class="text">
-            Welcome to ZillaWear
-        </h1>
-    </section>
+    <nav class="navbar">
+    <div class="logo">MoreZilla Wear</div>
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="menu-icon">&#9776;</label>
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <!-- <li><a href="#">Products</a></li> -->
+      <div class="dropdown">
+        <button class="dropbtn">Products</button>
+        <div class="dropdown-content">
+            <a href="#">Jerseys</a>
+            <a href="#">Boots</a>
+            <a href="#">Accessories</a>
+      </div>
+    </div>
+
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+  <section class="card-container">
+    <div class="card">
+        <img src="/shirts/mancity.webp" alt="mancity">
+        <p>699ksh</p>
+        <button>Add to Cart</button>
+    </div>
+    <div class="card">
+        <img src="/shirts/inter miami.webp" alt="mancity">
+        <p>699ksh</p>
+        <button>Add to Cart</button>
+    </div>
+    <div class="card">
+        <img src="/shirts/manunited.webp" alt="mancity">
+        <p>699ksh</p>
+        <button>Add to Cart</button>
+    </div>
+    <div class="card">
+        <img src="/shirts/chelsea.webp" alt="mancity">
+        <p>699ksh</p>
+        <button>Add to Cart</button>
+    </div>
+  </section>
+
     <script src="script.js"></script>
 </body>
 </html>
