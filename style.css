@@ -14,7 +14,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #fd790d;
+  background: #007bff;
   padding: 10px 20px;
   color: black;
 }
@@ -22,6 +22,11 @@ body {
 .logo {
   font-size: 1.5em;
   font-weight: bold;
+  font-family: "Manufacturing Consent", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  color:white;
+
 }
 
 .nav-links {
@@ -46,6 +51,8 @@ body {
   display: none;
   font-size: 3em;
   cursor: pointer;
+  font-family: 'Great Vibes', cursive;
+
 }
 
 #menu-toggle {
@@ -85,7 +92,7 @@ body {
     .dropdown-content {
       display: none;
       position: absolute;
-      background-color: #fd790d;
+      background-color: #007bff;
       min-width: 160px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.15);
       z-index: 1;
@@ -109,43 +116,136 @@ body {
     .dropdown:hover .dropbtn {
       background-color: #444;
     }
-section .card-container{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-    justify-content: center;
-    padding: 20px;
-
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
-.card {
-      width: 100%;
-      max-width: 300px;
-      margin: auto;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      /* overflow: hidden; */
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      text-align: center;
-      font-family: Arial, sans-serif;
-    }
 
-    .card img {
-      width: 100%;
-      height: auto;
-      display: flex;
-      flex-wrap: flex;
-    }
+.cards {
+  background-color: #fefefe;
+  border: 1px solid #000000;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
 
-    .card button {
-      background-color: #fd790d;
-      color: white;
-      border: none;
-      padding: 12px;
-      width: 100%;
-      font-size: 16px;
-      cursor: pointer;
-    }
+.cards img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
 
-    .card button:hover {
-      background-color: #984501;
-    }
+.cards p {
+  font-size: 18px;
+  margin: 8px 0;
+  color: #333;
+}
+
+.cards button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cards button:hover {
+  background-color: #0056b3;
+}
+.cart-icon {
+  cursor: pointer;
+  font-size: 18px;
+  position: relative;
+}
+
+#cart-count {
+  background-color: red;
+  color: blue;
+  padding: 2px 6px;
+  border-radius: 50%;
+  font-size: 14px;
+  position: absolute;
+  top: -8px;
+  right: -10px;
+}
+
+.cart-container {
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background: white;
+  border: 1px solid #ccc;
+  padding: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  width: 350px;
+  color: blue;
+  border-radius: 6px;
+}
+.checkout-area {
+  background-color: #007bff;
+  color: white;
+  padding: 12px;
+  margin-top: 16px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.checkout-area button {
+  margin-top: 8px;
+  padding: 8px 16px;
+  border: none;
+  background: white;
+  color: #007bff;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 6px;
+}
+.button-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 8px;
+}
+.checkout-area button:first-child {
+  background: white;
+  color: #007bff;
+}
+
+#cancel-btn {
+  background-color: #ff4c4c;
+  color: white;
+}
+
+#cart-items {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: none;
+}
+
+#search-input {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: none;
+  font-size: 16px;
+  border: none;
+}
+
+.cards {
+  transition: all 0.3s ease;
+}
+

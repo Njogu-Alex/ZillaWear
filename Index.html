@@ -5,11 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="/icons/favicon.ico.png">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manufacturing+Consent&display=swap" rel="stylesheet">
     <title>MoreZilla Wear</title>
 </head>
 <body>
     <nav class="navbar">
     <div class="logo">MoreZilla Wear</div>
+    <div class="nav-actions">
+      <input type="text" id="search-input" placeholder="Search jerseis..." oninput="filterCards()" />
+      
+    </div>
+
     <input type="checkbox" id="menu-toggle">
     <label for="menu-toggle" class="menu-icon">&#9776;</label>
     <ul class="nav-links">
@@ -23,31 +30,52 @@
             <a href="#">Accessories</a>
       </div>
     </div>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+      
+    <div class="cart-icon" onclick="toggleCart()">
+    🛒 <span id="cart-count">0</span>
+    </div>
+    <div id="cart-container" class="cart-container">
+  <h3>Your Cart</h3>
+  <ul id="cart-items"></ul>
+  <div class="checkout-area">
+    <p>Total: <span id="cart-total"></span></p>
+    <div class="button-row">
+      <button onclick="checkout()">Checkout</button>
+      <button onclick="cancelCart()" id="cancel-btn">Cancel</button>
+    </div>
 
-      <li><a href="#">About</a></li>
-      <li><a href="#">Contact</a></li>
+  </div>
+
+  </div>
+
     </ul>
   </nav>
   <section class="card-container">
-    <div class="card">
+    <div class="cards">
         <img src="/shirts/mancity.webp" alt="mancity">
         <p>699ksh</p>
-        <button>Add to Cart</button>
+        <p>Manchester city away kit</p>
+        <button onclick="addToCart('Man City Shirt', 699)">Add to Cart</button>
     </div>
-    <div class="card">
+    <div class="cards">
         <img src="/shirts/inter miami.webp" alt="mancity">
         <p>699ksh</p>
-        <button>Add to Cart</button>
+        <p>intermiami home</p>
+        <button onclick="addToCart('intermiami home', 699)">Add to Cart</button>
     </div>
-    <div class="card">
+    <div class="cards">
         <img src="/shirts/manunited.webp" alt="mancity">
         <p>699ksh</p>
-        <button>Add to Cart</button>
+        <p>Manchester united home</p>
+        <button onclick="addToCart('Manchester united', 699)">Add to Cart</button>
     </div>
-    <div class="card">
+    <div class="cards">
         <img src="/shirts/chelsea.webp" alt="mancity">
         <p>699ksh</p>
-        <button>Add to Cart</button>
+        <p>Chelsea home kit</p>
+        <button onclick="addToCart('Chelsea home kit', 699)">Add to Cart</button>
     </div>
   </section>
 
